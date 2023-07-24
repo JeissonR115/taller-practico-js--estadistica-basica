@@ -1,2 +1,1 @@
-# taller-practico-js--estadistica-basica
-Taller Práctico de JavaScript: Matemáticas y Estadística Básica
+# Taller Práctico de JavaScript: Matemáticas y Estadística Básica
