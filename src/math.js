@@ -26,6 +26,31 @@ Area: ${this.area.toFixed(numDecimals)}${unit}^2
 `
     )
 }
+class triangle {
+    constructor(side1, side2, side3,unit) {
+        this.sides = [side1, side2, side3]
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+        this.unit = unit;
+        
+        this.perimeter = this.calculatePerimeter(this.sides)
+        this.semiPerimeter = this.perimeter/2;
+        this.area = this.calculateArea(this.sides,this.semiPerimeter);
+    }
+    calculatePerimeter = (sides ) => sides[0]+sides[1]+sides[2]
+    calculateArea = (sides , semiPerimeter)=> Math.sqrt((semiPerimeter-sides[0])*(semiPerimeter-sides[1])*(semiPerimeter-sides[2])*semiPerimeter , 2)
+    printInfo = (numDecimals, unit = this.unit) => console.log(
+`
+Number of sides: ${this.sides.length}
+Sides length: ${this.sides[0]+ unit} ${this.sides[1]+ unit} ${this.sides[2]+ unit}
+Perimeter: ${this.perimeter.toFixed(numDecimals)}${unit}
+Area: ${this.area.toFixed(numDecimals)}${unit}^2
+`
+    )
+}
+const t1 = new triangle(2,4,3);
+t1.printInfo(2,'m')
 const square1 = new RegularPolygon(4, 10, 'cm');
 square1.printInfo(1)
 const triangle1 = new RegularPolygon(3, 1, 'cm');
