@@ -1,0 +1,1 @@
+const calculateDiscount = (price, discount) => (price * (100 - discount)) / 100;
